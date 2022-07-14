@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="57" viewBox="0 0 380 57">
+  <g id="그룹_6" data-name="그룹 6" transform="translate(-770 -819)">
+    <g id="그룹_10" data-name="그룹 10">
+      <path id="패스_6" data-name="패스 6" d="M7.6,0H372.4A7.6,7.6,0,0,1,380,7.6V49.4a7.6,7.6,0,0,1-7.6,7.6H7.6A7.6,7.6,0,0,1,0,49.4V7.6A7.6,7.6,0,0,1,7.6,0Z" transform="translate(770 819)" fill="#03c75a" fill-rule="evenodd"/>
+      <text id="네이버계정으로_로그인" data-name="네이버계정으로 로그인" transform="translate(892.733 853.745)" fill="#fff" font-size="18" font-family="NotoSansKR-Bold, Noto Sans KR" font-weight="700"><tspan x="0" y="0">네이버계정으로 로그인</tspan></text>
+      <path id="패스_8" data-name="패스 8" d="M298.36,541.24,290.509,530H284v21h6.819v-11.24L298.67,551h6.509V530H298.36Z" transform="translate(505.806 307)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

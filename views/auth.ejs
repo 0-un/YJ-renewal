@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+      <!-- fontawesome 아이콘 삽입 -->
+      <script src="https://kit.fontawesome.com/4265d65fff.js" crossorigin="anonymous"></script>
+      <!-- 제이쿼리 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- 네이버 -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+<style>
+
+
+
+.inputBox {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(156 163 175);
+  border-radius: 5px;
+  color: rgb(156 163 175);
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid rgb(156 163 175); */
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+/* 인풋 방식 1 */
+/* .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none; 
+  font-size: 1em;
+  text-transform: uppercase;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.75em;
+  padding: 0 10px;
+  background: #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #2B46CC;
+  font-weight: 600;
+} */
+
+/* 인풋 CSS 방식 2  */
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none; 
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: 0.5s;
+  color: rgb(156 163 175);
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  letter-spacing: 0.2em;
+  color: #2B46CC;
+  font-weight: 600;
+}
+
+
+.inputBox:nth-child(3) input:valid ~ span,
+.inputBox:nth-child(3) input:focus ~ span {
+  background: #fff;
+  border-radius: 2px;
+  
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid rgb(156 163 175);
+}
+/* // 인풋 CSS 방식 2  */
+
+</style>
+
+
+    <!-- 헤더 -->
+    <header>
+      <div id="top_menu">
+          <div>
+
+              <a href="javascript:void(0);">
+                  <i class="fa-solid fa-display"></i>
+                  <span>온라인 사전 학습</span>
+              </a>
+          </div>
+          <div>
+              <ul>
+                  <li><a href="javascript:void(0);">설문조사</a></li>
+                  <li><a href="/auth">로그인</a></li>
+                  <li><a href="javascript:void(0);">NCS 평가</a></li>
+                  <li><a href="javascript:void(0);">HRD</a></li>
+              </ul>
+          </div>
+      </div>
+      <div id="bottom_menu" style="align-items: center;">
+          <div id="toggle">
+              <div class="openNav" onclick="ShowMenu()">
+                  <i class="fa-solid fa-bars"></i>
+              </div>
+          </div>
+          <div id="logo">
+              <a href="/">
+                  <img src="images/header_logo.png" alt="logo">
+              </a>
+          </div>
+          <div id="blank"></div>
+      </div>
+      <nav id="pc_gnb">
+          <div id="main_gnb">
+              <ul>
+                  <li><a href="javascript:void(0);">모집과정</a></li>
+                  <li> <a href="javascript:void(0);">입학상담</a></li>
+                  <li> <a href="javascript:void(0);">HRD</a></li>
+                  <li><a href="javascript:void(0);">취업센터</a></li>
+                  <li> <a href="javascript:void(0);">커뮤니티</a></li>
+                  <li><a href="javascript:void(0);">학교소개</a></li>
+              </ul>
+          </div>
+          <div id="sub">
+              <div id="sub_menu">
+                  <ul class="menu">
+                      <li><a href="./sub_index.html">현재 모집 중인 과정</a></li>
+                      <li><a href="javascript:void(0);">연간 모집 과정</a></li>
+                      <li><a href="javascript:void(0);">과정 소개</a></li>
+                  </ul>
+                  <ul class="menu">
+                      <li><a href="javascript:void(0);">입학 상담</a></li>
+                      <li><a href="javascript:void(0);">온라인 접수</a></li>
+                      <li><a href="javascript:void(0);">일반고 직업반 입학 상담</a></li>
+                      <li><a href="javascript:void(0);">접수 상태 확인</a></li>
+                      <li><a href="javascript:void(0);">자주하는 질문</a></li>
+                  </ul>
+                  <ul class="menu">
+                      <li><a href="javascript:void(0);">국민내일배움카드</a></li>
+                      <li><a href="javascript:void(0);">국민취업지원제도</a></li>
+                  </ul>
+                  <ul class="menu">
+                      <li><a href="javascript:void(0);">업체 채용 소식</a></li>
+                      <li><a href="javascript:void(0);">업무 협약 소식</a></li>
+                      <li><a href="javascript:void(0);">취업 센터 소식</a></li>
+                      <li><a href="javascript:void(0);">취업 성공 후기</a></li>
+                  </ul>
+                  <ul class="menu">
+                      <li><a href="javascript:void(0);">공지 및 새소식</a></li>
+                      <li><a href="javascript:void(0);">역대 송암전 수상작</a></li>
+                      <li><a href="javascript:void(0);">학교에 바란다</a></li>
+                      <li><a href="javascript:void(0);">교수 채용(상시)</a></li>
+                  </ul>
+                  <ul class="menu">
+                      <li><a href="javascript:void(0);">인사말</a></li>
+                      <li><a href="javascript:void(0);">조직 및 연혁</a></li>
+                      <li><a href="javascript:void(0);">교직원 소개</a></li>
+                      <li><a href="javascript:void(0);">시설 안내</a></li>
+                      <li><a href="javascript:void(0);">교육 시스템</a></li>
+                      <li><a href="javascript:void(0);">오시는 길</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+
+      </nav>
+      <nav id="mobile_gnb">
+          <div id="mobile_slide_bg"></div>
+          <div id="mobile_slide">
+              <div id="mobile_slide_menu_bg">
+                  <div class="mobile_logo">
+                      <img src="./images/header_logo.png" alt="">
+                  </div>
+                  <div class="m_slide_menu slide_toggle1">
+                      모집과정
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container1">
+                      <p><a href="./sub_index.html">현재 모집 중인 과정</a></p>
+                      <p><a href="#">연간 모집 과정</a></p>
+                      <p><a href="#">과정 소개</a></p>
+                  </div>
+                  <div class="m_slide_menu slide_toggle2">
+                      입학상담
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container2">
+                      <p><a href="#">입학 상담</a></p>
+                      <p><a href="#">온라인 접수</a></p>
+                      <p><a href="#">일반고 직업반 입학 상담</a></p>
+                      <p><a href="#">접수 상태 확인</a></p>
+                      <p><a href="#">자주하는 질문</a></p>
+                  </div>
+                  <div class="m_slide_menu slide_toggle3">
+                      HRD
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container3">
+                      <p><a href="#">국민내일배움카드</a></p>
+                      <p><a href="#">국민취업지원제도</a></p>
+                  </div>
+                  <div class="m_slide_menu slide_toggle4">
+                      취업센터
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container4">
+                      <p><a href="#">업체 채용 소식</a></p>
+                      <p><a href="#">업무 협약 소식</a></p>
+                      <p><a href="#">취업 센터 소식</a></p>
+                      <p><a href="#">취업 성공 후기</a></p>
+                  </div>
+                  <div class="m_slide_menu slide_toggle5">
+                      커뮤니티
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container5">
+                      <p><a href="#">공지 및 새소식</a></p>
+                      <p><a href="#">역대 송암전 수상작</a></p>
+                      <p><a href="#">학교에 바란다</a></p>
+                      <p><a href="#">교수 채용(상시)</a></p>
+                  </div>
+                  <div class="m_slide_menu slide_toggle6">
+                      학교소개
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  <div class="m_submenu dropdown-container6">
+                      <p><a href="#">인사말</a></p>
+                      <p><a href="#">조직 및 연혁</a></p>
+                      <p><a href="#">교직원 소개</a></p>
+                      <p><a href="#">시설 안내</a></p>
+                      <p><a href="#">교육 시스템</a></p>
+                      <p><a href="#">오시는 길</a></p>
+                  </div>
+                  <div class="m_login">
+                      <a href="./login.html">로그인</a>
+                  </div>
+              </div>
+              <div class="closeNav" onclick="HideMenu()">&times;</div>
+          </div>
+      </nav>
+  </header>
+
+
+
+<!-- login -->
+<main class="container mx-auto px-5 mt-10 mb-12">
+  
+  <h2 class="text-center font-bold text-4xl text-blue-600 mb-8">LOGIN</h2>
+  <form class="container mx-auto text-center">
+
+    <div class="inputBox">
+      <input type="text" required="required">
+      <span>아이디</span>
+    </div>
+    
+    <div class="inputBox">
+      <input type="text" required="required">
+      <span>비밀번호</span>
+    </div>
+
+
+    <div class=" w-80 mx-auto flex mb-7 text-xs text-gray-400">
+      <input type="checkbox" class="mr-2">
+      <p class="mr-4">자동 로그인</p> 
+      <input type="checkbox" class="mr-2">
+      <p>아이디 저장</p> 
+    </div>
+
+  </form>
+  
+  <button class="w-full max-w-xs h-12 mx-auto flex justify-center items-center rounded-md mb-4 text-white text-lg font-bold bg-blue-600">로그인 하기</button>
+
+<div class="w-full max-w-xs mx-auto text-xs text-center flex justify-between text-gray-400">
+  <p class="w-full border-r border-gray-400"><a href="./register.html">회원가입</a></p>
+  <p class="w-full border-r border-gray-400">아이디 찾기</p>
+  <p class= w-full>비밀번호 찾기</p>
+</div>
+
+<div class="container mt-7"> 
+<a href="/auth/kakao"><img class="w-80 mx-auto mb-2" src="./kakao_login.svg"></a>
+<!-- 네이버 로그인 버튼 노출 영역 -->
+<a href="/auth/naver"><img class="w-80 mx-auto" src="./naver_login.svg"></a>
+</div>
+
+</main>
+
+
+
+
+<footer>
+
+  <div id="footer">
+      <div class="footer_top">개인정보보호정책 | 메일주소무단수집거부</div>
+      <div class="footer_bottom">
+          <div>회사명 : 영진직업전문학교</div>
+          <div>대표자 : 곽승호, 차영숙 | cha8877@hanmail.net</div>
+          <div>Tel : 053-983-8877 | Fax : 053-722-2423</div>
+          <div>개인정보보호책임자 : 곽창운 | 사업자번호 : 502-95-07029</div>
+          <div>701-835 대구광역시 동구 화랑로 525(용계동) | 조경실습장 : 대구 동구 도동 806-21</div>
+          <div><br></div>
+          <div>copyright © 대구 국비지원 무료교육 영진직업전문학교. All Rights Reserved.</div>
+      </div>
+      <div class="sns">
+          <!-- 페이스북 -->
+          <a href="https://www.facebook.com/yjjob/">
+              <svg width="33.853" height="33.853" viewBox="0 0 33.853 33.853">
+                  <g id="그룹_18" data-name="그룹 18" transform="translate(0 0)">
+                      <path
+                          d="M118.023,224.873a16.927,16.927,0,1,0-19.571,16.721V229.766h-4.3v-4.893h4.3v-3.729c0-4.242,2.527-6.586,6.393-6.586a26.038,26.038,0,0,1,3.789.331v4.166H106.5a2.446,2.446,0,0,0-2.758,2.643v3.175h4.695l-.751,4.893h-3.944v11.828A16.931,16.931,0,0,0,118.023,224.873Z"
+                          transform="translate(-84.17 -207.946)" fill="#fff" />
+                      <path
+                          d="M137.515,249.521l.751-4.893h-4.695v-3.175a2.446,2.446,0,0,1,2.758-2.643h2.135v-4.166a26.038,26.038,0,0,0-3.789-.331c-3.867,0-6.393,2.343-6.393,6.586v3.729h-4.3v4.893h4.3v11.828a17.109,17.109,0,0,0,5.29,0V249.521Z"
+                          transform="translate(-114 -227.701)" fill="#013D79" />
+                  </g>
+              </svg>
+          </a>
+
+          <!-- 인스타 -->
+          <a href="https://www.instagram.com/accounts/login/?next=/yjjob8877/">
+              <svg width="34" height="34" viewBox="0 0 34 34">
+                  <g transform="translate(0.242 0.068)">
+                      <circle cx="17" cy="17" r="17" transform="translate(-0.242 -0.068)" fill="#fff" />
+                      <g transform="translate(6.702 6.186)">
+                          <g>
+                              <path
+                                  d="M568.068,234.85c2.822,0,3.156.011,4.271.061a5.846,5.846,0,0,1,1.962.364,3.5,3.5,0,0,1,2.006,2.006,5.85,5.85,0,0,1,.364,1.962c.051,1.115.061,1.449.061,4.271s-.011,3.156-.061,4.27a5.85,5.85,0,0,1-.364,1.962,3.5,3.5,0,0,1-2.006,2.006,5.852,5.852,0,0,1-1.962.364c-1.114.051-1.448.061-4.271.061s-3.156-.011-4.271-.061a5.851,5.851,0,0,1-1.962-.364,3.5,3.5,0,0,1-2.006-2.006,5.846,5.846,0,0,1-.364-1.962c-.051-1.115-.061-1.449-.061-4.271s.011-3.156.061-4.271a5.845,5.845,0,0,1,.364-1.962,3.5,3.5,0,0,1,2.006-2.006,5.845,5.845,0,0,1,1.962-.364c1.115-.051,1.449-.061,4.271-.061m0-1.9c-2.87,0-3.23.012-4.357.064a7.758,7.758,0,0,0-2.565.491,5.4,5.4,0,0,0-3.091,3.091,7.759,7.759,0,0,0-.491,2.565c-.051,1.127-.064,1.487-.064,4.357s.012,3.23.064,4.357a7.759,7.759,0,0,0,.491,2.565,5.4,5.4,0,0,0,3.091,3.091,7.758,7.758,0,0,0,2.565.491c1.127.051,1.487.064,4.357.064s3.23-.012,4.357-.064a7.758,7.758,0,0,0,2.565-.491,5.4,5.4,0,0,0,3.091-3.091,7.759,7.759,0,0,0,.491-2.565c.052-1.127.064-1.487.064-4.357s-.012-3.23-.064-4.357a7.759,7.759,0,0,0-.491-2.565,5.4,5.4,0,0,0-3.091-3.091,7.758,7.758,0,0,0-2.565-.491c-1.127-.051-1.487-.064-4.357-.064Z"
+                                  transform="translate(-557.5 -232.946)" fill="#013D79" />
+                              <path
+                                  d="M583.6,253.622a5.427,5.427,0,1,0,5.427,5.427A5.427,5.427,0,0,0,583.6,253.622Zm0,8.95a3.523,3.523,0,1,1,3.523-3.523A3.523,3.523,0,0,1,583.6,262.572Z"
+                                  transform="translate(-573.035 -248.481)" fill="#003061" />
+                              <ellipse cx="1.268" cy="1.268" rx="1.268" ry="1.268"
+                                  transform="translate(14.941 3.659)" fill="#013D79" />
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+          </a>
+
+          <!-- 카카오톡 -->
+          <a href="https://pf.kakao.com/_bItTxd">
+              <svg width="34" height="34" viewBox="0 0 34 34">
+                  <g transform="translate(-978.498 -1318.155)">
+                      <path
+                          d="M995.5,1318.155a17,17,0,1,0,17,17A17,17,0,0,0,995.5,1318.155Zm10.844,20.354a10.215,10.215,0,0,1-3.7,3.486,13.615,13.615,0,0,1-4.626,1.634,14.926,14.926,0,0,1-2.354.205,14.36,14.36,0,0,1-2.149-.13.37.37,0,0,0-.286.07c-1.415.993-2.829,1.988-4.29,2.913-.177.112-.363.212-.546.316a.577.577,0,0,1-.209.072c-.233.031-.37-.106-.321-.338.087-.407.208-.806.322-1.206q.432-1.516.867-3.03c.026-.089.017-.131-.075-.177a11.125,11.125,0,0,1-3.585-2.8,8.187,8.187,0,0,1-1.878-4.031,7.628,7.628,0,0,1,.877-4.928,10,10,0,0,1,3.438-3.614,13.418,13.418,0,0,1,4.993-1.934,14.952,14.952,0,0,1,4.022-.176,13.491,13.491,0,0,1,6.94,2.533,9.252,9.252,0,0,1,3.142,3.833A7.6,7.6,0,0,1,1006.342,1338.509Z"
+                          fill="#fff" />
+                      <path
+                          d="M1065.961,1373.848c-.055-.072-.058-.111.01-.178.491-.484.977-.974,1.465-1.461a.625.625,0,0,0,.174-.266.677.677,0,0,0-.321-.753.587.587,0,0,0-.766.1q-.894.893-1.787,1.788a.84.84,0,0,0-.08.111l-.042-.029v-.1c0-.454,0-.909,0-1.363a.7.7,0,1,0-1.39.005q0,2.373,0,4.746a.715.715,0,0,0,.064.3.694.694,0,0,0,.752.4.683.683,0,0,0,.575-.664c.006-.479,0-.958,0-1.438,0-.081.159-.328.228-.324.088.006.1.113.161.167a.417.417,0,0,1,.037.049c.483.639.963,1.28,1.449,1.917a.7.7,0,1,0,1.1-.854Q1066.777,1374.923,1065.961,1373.848Z"
+                          transform="translate(-63.386 -39.532)" fill="#fff" />
+                      <path
+                          d="M1029.548,1373.727c-.259-.682-.515-1.364-.778-2.044a.989.989,0,0,0-1.075-.651,1.022,1.022,0,0,0-.781.687q-.71,1.865-1.416,3.732a6.009,6.009,0,0,0-.312.9c-.1.5.065.748.552.82a.624.624,0,0,0,.755-.435c.087-.227.177-.453.259-.681a.117.117,0,0,1,.133-.091c.322,0,.644,0,.966,0s.636,0,.954,0a.13.13,0,0,1,.148.105c.083.233.187.458.26.694a.57.57,0,0,0,.578.414,1.067,1.067,0,0,0,.436-.073.443.443,0,0,0,.306-.41,1.482,1.482,0,0,0-.111-.666Q1029.987,1374.876,1029.548,1373.727Zm-1.881,1c-.136,0-.273,0-.409,0-.089,0-.1-.018-.072-.1.18-.5.355-1,.532-1.5l.131-.374.7,1.976Z"
+                          transform="translate(-34.907 -39.548)" fill="#fff" />
+                      <path
+                          d="M1014.1,1372.331a.683.683,0,0,0-.191-1.343q-1.765,0-3.53,0a.682.682,0,1,0,.006,1.363c.31,0,.62.007.929,0,.115,0,.134.035.133.139,0,.661,0,1.322,0,1.982s0,1.329,0,1.994a.693.693,0,0,0,.917.663.681.681,0,0,0,.479-.7q0-1.976,0-3.951c0-.094.02-.128.121-.126.31.007.619,0,.929,0A.787.787,0,0,0,1014.1,1372.331Z"
+                          transform="translate(-23.329 -39.525)" fill="#fff" />
+                      <path
+                          d="M1050.881,1375.791q-.681-.008-1.363,0c-.109,0-.137-.026-.137-.136,0-1.292,0-2.585,0-3.878a.965.965,0,0,0-.021-.258.713.713,0,0,0-.758-.524.7.7,0,0,0-.641.7c0,.785,0,1.569,0,2.354s0,1.577,0,2.366a.632.632,0,0,0,.607.643q1.177.014,2.354,0a.636.636,0,0,0,.609-.666A.646.646,0,0,0,1050.881,1375.791Z"
+                          transform="translate(-51.97 -39.53)" fill="#fff" />
+                  </g>
+              </svg>
+          </a>
+
+          <!-- 네이버 -->
+          <a href="https://blog.naver.com/yjjob8877">
+              <svg width="34" height="34" viewBox="0 0 34 34">
+                  <g transform="translate(-0.025 0.068)">
+                      <circle cx="17" cy="17" r="17" transform="translate(0.025 -0.068)" fill="#fff" />
+                      <text id="blog" transform="translate(2.025 20.932)" fill="#003061" font-size="13"
+                          font-family="NotoSansKR-Black, Noto Sans KR" font-weight="800">
+                          <tspan x="0" y="0">blog</tspan>
+                      </text>
+                  </g>
+              </svg>
+          </a>
+
+      </div>
+  </div>
+</footer>
+
+
+    <!-- 메인 자바스크립트 -->
+    <script src="js/script.js"></script>
+</body>
+</html>

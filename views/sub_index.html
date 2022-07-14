@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3.x snippet -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fontawesome 아이콘 삽입 -->
+    <script src="https://kit.fontawesome.com/4265d65fff.js" crossorigin="anonymous"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+        <div id="top_menu">
+            <div>
+                <i class="fa-solid fa-display"></i>
+                <a href="javascript:void(0);">
+                    온라인 사전 학습
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="javascript:void(0);">설문조사</a></li>
+                    <li><a href="javascript:void(0);">로그인</a></li>
+                    <li><a href="javascript:void(0);">NCS 평가</a></li>
+                    <li><a href="javascript:void(0);">HRD</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div id="bottom_menu">
+            <div id="toggle">
+                <div class="openNav" onclick="ShowMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="images/header_logo.png" alt="logo">
+                </a>
+            </div>
+            <div id="blank"></div>
+        </div>
+        <nav id="pc_gnb">
+            <div id="main_gnb">
+                <ul>
+                    <li><a href="javascript:void(0);">모집과정</a></li>
+                    <li> <a href="javascript:void(0);">입학상담</a></li>
+                    <li> <a href="javascript:void(0);">HRD</a></li>
+                    <li><a href="javascript:void(0);">취업센터</a></li>
+                    <li> <a href="javascript:void(0);">커뮤니티</a></li>
+                    <li><a href="javascript:void(0);">학교소개</a></li>
+                </ul>
+            </div>
+            <div id="sub">
+                <div id="sub_menu">
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">현재 모집 중인 과정</a></li>
+                        <li><a href="javascript:void(0);">연간 모집 과정</a></li>
+                        <li><a href="javascript:void(0);">과정 소개</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">입학 상담</a></li>
+                        <li><a href="javascript:void(0);">온라인 접수</a></li>
+                        <li><a href="javascript:void(0);">일반고 직업반 입학 상담</a></li>
+                        <li><a href="javascript:void(0);">접수 상태 확인</a></li>
+                        <li><a href="javascript:void(0);">자주하는 질문</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">국민내일배움카드</a></li>
+                        <li><a href="javascript:void(0);">국민취업지원제도</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">업체 채용 소식</a></li>
+                        <li><a href="javascript:void(0);">업무 협약 소식</a></li>
+                        <li><a href="javascript:void(0);">취업 센터 소식</a></li>
+                        <li><a href="javascript:void(0);">취업 성공 후기</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">공지 및 새소식</a></li>
+                        <li><a href="javascript:void(0);">역대 송암전 수상작</a></li>
+                        <li><a href="javascript:void(0);">학교에 바란다</a></li>
+                        <li><a href="javascript:void(0);">교수 채용(상시)</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">인사말</a></li>
+                        <li><a href="javascript:void(0);">조직 및 연혁</a></li>
+                        <li><a href="javascript:void(0);">교직원 소개</a></li>
+                        <li><a href="javascript:void(0);">시설 안내</a></li>
+                        <li><a href="javascript:void(0);">교육 시스템</a></li>
+                        <li><a href="javascript:void(0);">오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+
+        <nav id="mobile_gnb">
+            <div id="mobile_slide_bg"></div>
+            <div id="mobile_slide">
+                <div id="mobile_slide_menu_bg">
+                    <div class="mobile_logo">
+                        <img src="./images/header_logo.png" alt="">
+                    </div>
+                    <div class="m_slide_menu slide_toggle1">
+                        모집과정
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container1">
+                        <p><a href="#">현재 모집 중인 과정</a></p>
+                        <p><a href="#">연간 모집 과정</a></p>
+                        <p><a href="#">과정 소개</a></p>
+                    </div>
+                    <div class="m_slide_menu slide_toggle2">
+                        입학상담
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container2">
+                        <p><a href="#">입학 상담</a></p>
+                        <p><a href="#">온라인 접수</a></p>
+                        <p><a href="#">일반고 직업반 입학 상담</a></p>
+                        <p><a href="#">접수 상태 확인</a></p>
+                        <p><a href="#">자주하는 질문</a></p>
+                    </div>
+                    <div class="m_slide_menu slide_toggle3">
+                        HRD
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container3">
+                        <p><a href="#">국민내일배움카드</a></p>
+                        <p><a href="#">국민취업지원제도</a></p>
+                    </div>
+                    <div class="m_slide_menu slide_toggle4">
+                        취업센터
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container4">
+                        <p><a href="#">업체 채용 소식</a></p>
+                        <p><a href="#">업무 협약 소식</a></p>
+                        <p><a href="#">취업 센터 소식</a></p>
+                        <p><a href="#">취업 성공 후기</a></p>
+                    </div>
+                    <div class="m_slide_menu slide_toggle5">
+                        커뮤니티
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container5">
+                        <p><a href="#">공지 및 새소식</a></p>
+                        <p><a href="#">역대 송암전 수상작</a></p>
+                        <p><a href="#">학교에 바란다</a></p>
+                        <p><a href="#">교수 채용(상시)</a></p>
+                    </div>
+                    <div class="m_slide_menu slide_toggle6">
+                        학교소개
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="m_submenu dropdown-container6">
+                        <p><a href="#">인사말</a></p>
+                        <p><a href="#">조직 및 연혁</a></p>
+                        <p><a href="#">교직원 소개</a></p>
+                        <p><a href="#">시설 안내</a></p>
+                        <p><a href="#">교육 시스템</a></p>
+                        <p><a href="#">오시는 길</a></p>
+                    </div>
+                    <div class="m_login">
+                        <p>로그인</p>
+                    </div>
+                </div>
+                <!-- 모바일 네비게이션 활성화시 닫기 버튼 -->
+                <div class="closeNav" onclick="HideMenu()">&times;</div>
+                <!-- // 모바일 네비게이션 활성화시 닫기 버튼 -->
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section class="sub_section_1">
+        <div class="input_wrap">
+            <label class="input_select_01" onclick="input_select_01()" for="ima">현재모집중인과정</label>
+            <label class="input_select_02" onclick="input_select_02()" for="playing">진행중인과정</label>
+            <label class="input_select_03" onclick="input_select_03()" for="year">연간모집과정</label>
+        </div>
+        <div class="text_contens_box_warp">
+            <input type="radio" id="ima" name="openAPI" value="ima">
+            <input type="radio" id="playing" name="openAPI" value="playing" checked="checked">
+            <input type="radio" id="year" name="openAPI" value="year">
+            <div class="text_contens_box text_contens_box1">
+                <div class="text_contens_box_img_box">
+                    <img src="./images/sub_section_1_01.png">
+                </div>
+                <div class=text_contens_box_right_box>
+                    <h3>(기계설계제작) CAD/CAM 3D기계설계가공 (7개월)</h3>
+                    <div class="class_tag">
+                        <div>기계설계가공</div>
+                        <div>구직자훈련(국기)</div>
+                        <div>IT·SW</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육기간</div>
+                        <div>21.10.12 ~ 22.04.19</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육시간</div>
+                        <div>09:10~16:50 (7교시) [월~금]</div>
+                    </div>
+                    <div class="text_line">
+                        <div>모집인원</div>
+                        <div>25명</div>
+                    </div>
+                    <div class="text_line">
+                        <div>수강료</div>
+                        <div>전액무료</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련장려금</div>
+                        <div>본인부담금 없음</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련수당</div>
+                        <div>300,000원 (매달지급)<br><span style="font-size:12px; line-height:10px">(단, 국민취업지원제도 참여시 최대
+                                600,000~816,000원)</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text_contens_box text_contens_box2">
+                <div class="text_contens_box_img_box">
+                    <img src="./images/sub_section_1_02.jpg">
+                </div>
+                <div class=text_contens_box_right_box>
+                    <h3>Oepn API를 할용한 스마트 웹&앱 콘텐츠 실무 개발자</h3>
+                    <div class="class_tag">
+                        <div>K-Digital Training</div>
+                        <div>구직자훈련</div>
+                        <div>IT·SW</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육기간</div>
+                        <div>21.12.27 ~ 22.07.21</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육시간</div>
+                        <div>09:10~16:50 (7교시) [월~금]</div>
+                    </div>
+                    <div class="text_line">
+                        <div>모집인원</div>
+                        <div>25명</div>
+                    </div>
+                    <div class="text_line">
+                        <div>수강료</div>
+                        <div>전액무료</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련장려금</div>
+                        <div>본인부담금 없음</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련수당</div>
+                        <div>316,000원 (매달지급)<br><span style="font-size:12px; line-height:10px">(단, 국민취업지원제도 참여시 최대
+                                600,000~816,000원)</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text_contens_box text_contens_box3">
+                <div class="text_contens_box_img_box">
+                    <img src="./images/sub_section_1_03.png">
+                </div>
+                <div class=text_contens_box_right_box>
+                    <h3>(내선공사) 전기공사 및 전기관리자 양성 B </h3>
+                    <div class="class_tag">
+                        <div>구직자훈련(국기)</div>
+                        <div>전기PLC</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육기간</div>
+                        <div>21.11.02 ~ 22.05.02</div>
+                    </div>
+                    <div class="text_line">
+                        <div>교육시간</div>
+                        <div>09:10~16:50 (7교시) [월~금]</div>
+                    </div>
+                    <div class="text_line">
+                        <div>모집인원</div>
+                        <div>25명</div>
+                    </div>
+                    <div class="text_line">
+                        <div>수강료</div>
+                        <div>전액무료</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련장려금</div>
+                        <div>본인부담금 없음</div>
+                    </div>
+                    <div class="text_line">
+                        <div>훈련수당</div>
+                        <div>300,000원 (매달지급)<br><span style="font-size:12px; line-height:10px">(단, 국민취업지원제도 참여시 최대
+                                600,000~816,000원)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+
+
+
+
+    <section class="sub_section_2">
+        <div>
+            <h1>Open API를 활용한 스마트 웹&앱</h1>
+            <h1>콘텐츠 실무 개발자</h1>
+        </div>
+
+        <!-- 센터라인 -->
+        <div id="sub_section_centerline">
+            <div></div>
+            <div id="sub_section_center"></div>
+            <div></div>
+        </div>
+
+        <div id="sub_section_2_article">
+            <span>"4차 산업혁명의 융합형 인재,</span>
+            <span>실무 프로젝트를 수행하여</span>
+            <span>산업 현장에 바로 적응할 수 있는 실무 인재 양성"</span>
+        </div>
+
+    </section>
+
+
+    <section class="sub_section_3">
+        <div id="sub_section_3_intro_drawer">
+            <div id="triple">
+                <div class="sub_section_3_intro_card">
+                    <div><img src="./images/sub_section_3_01.png" width="60px"></div>
+                    <h3>UX설계 · UI디자인</h3>
+                    <p>스토리보드 구상,</p>
+                    <p>프로토타입 제작 등</p>
+                    <p>UX설계 및 그래픽</p>
+                    <p>소프트웨어를 활용한</p>
+                    <p>UI 디자인</p>
+                </div>
+                <div class="sub_section_3_intro_card">
+                    <div><img src="./images/sub_section_3_02.png" width="60px"></div>
+                    <h3>웹퍼블리싱 및</br>반응형 웹 개발</h3>
+                    <p>HTML5, CSS, Javascript,</p>
+                    <p>jQuery를 사용하여 웹 표준과</p>
+                    <p>웹 접근성을 준수한</p>
+                    <p>반응형 웹 사이트 개발 및 구현</p>
+                </div>
+                <div class="sub_section_3_intro_card">
+                    <div><img src="./images/sub_section_3_03.png" width="60px"></div>
+                    <h3>리액트 프레임워크</br>및 프론트엔드 개발</h3>
+                    <p>자바스크립트 프레임워크</p>
+                    <p>리액트(React)를 활용한</p>
+                    <p>프론트 엔드 개발</p>
+                </div>
+            </div>
+            <div id="double">
+                <div class="sub_section_3_intro_card">
+                    <div><img src="./images/sub_section_3_04.png" width="60px"></div>
+                    <h3>하이브리드 앱 개발</h3>
+                    <p>Javascript, PHP,</p>
+                    <p>Mysql, 활용한 서버연동</p>
+                    <p>하이브리드앱 개발</p>
+                </div>
+                <div class="sub_section_3_intro_card">
+                    <div><img src="./images/sub_section_3_05.png" width="60px"></div>
+                    <h3>Open API</br>활용 프로젝트</h3>
+                    <p>Open API를 활용한</p>
+                    <p>웹&앱 콘텐츠 개발</p>
+                    <p>실무프로젝트 수행</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sub_section_5">
+        <img src="./images/sub_section_5_01.png">
+        <div class="sub_section_5_textbox_wrap">
+            <div>
+                <h2>디지털 ・ 신기술 분야로<br> 취업하고 싶다면</h2>
+                <p>지금 당장은 코드 한 줄 쓸 수 없더라도<br>
+                    디지털·신기술 분야로의 취업 가능성을 열어드립니다.<br>
+                    4차 산업혁명과 함께 폭발적으로 성장하고 있는<br>
+                    디지털·신기술 분야, 여러분이 채워줄 수 있습니다.</p>
+            </div>
+            <div>
+                <h2>프로젝트 중심 훈련으로<br>
+                    차별화된 훈련경험</h2>
+                <p>K-디지털 트레이닝 훈련과정은<br>
+                    프로젝트 과제 수행, 해커톤, 기업과제 해결 등을 통해<br>
+                    지식전달이 아닌 경험 획득과 문제 해결에 초점을 둡니다.</p>
+            </div>
+            <div>
+                <h2>훈련비 전액 지원</h2>
+                <a href="#">지원방법 보러가기 →</a>
+                <p>K-디지털 트레이닝은<br>
+                    국민내일배움카드 발급자를 대상으로 운영됩니다.<br>
+                    K-디지털 트레이닝 훈련을 최초로 신청하시는 경우<br>
+                    훈련비가 전액 지원됩니다.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="sub_section_6">
+        <div class="sub_section_6_title">
+            <h2>K-디지털 훈련과정 로드맵</h2>
+        </div>
+        <div class="sub_section_6_line1">
+
+            <div class="number_box top_image1">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">01월차</span>
+                        <b><span style="font-size:25px">정규교과</span></b>
+                    </div>
+                    <p>· 스마트 문화앱 콘텐츠 설계</p>
+                    <p>· 화면구현</p>
+                    <p>· 반응형 웹 구현</p>
+                </div>
+            </div>
+
+            <div class="number_box top_image2">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">02월차</span>
+                        <b><span style="font-size:25px">정규교과</span></b>
+                    </div>
+                    <p>· 스마트 문화앱 UI 디자인</p>
+                    <p>· 반응형웹 구현</p>
+                    <p>· 자바스크립트 & 제이쿼리</p>
+                </div>
+            </div>
+
+            <div class="number_box top_image3">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">03월차</span>
+                        <b><span style="font-size:25px">정규교과</span></b>
+                    </div>
+                    <p>· 스마트 문화앱 UX 설계</p>
+                    <p>· 자바스크립트 & 제이쿼리</p>
+                    <p>· Open API & 공공데이터 활용</p>
+                </div>
+            </div>
+
+            <div class="number_box top_image4">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">04월차</span>
+                        <b><span style="font-size:25px">정규교과</span></b>
+                    </div>
+                    <p>· Open API & 공공데이터 활용</p>
+                    <p>· 리액트프레임워크</p>
+                    <p>· 데이터베이스</p>
+                    <p>· 하이브리드앱 개발</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="sub_section_6_line2">
+
+            <div class="number_box top_image5">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">05월차</span>
+                        <b><span style="font-size:25px">프로젝트</span></b>
+                    </div>
+                    <p>· SNS 마케팅 자동화 스마트 웹앱 콘텐츠 개발</p>
+                    <p>(REST API, MVC 디자인 패턴, React)</p>
+                    <div class="number_box_bottom_title mt-40">
+                        <span style="font-size:20px">05월차</span>
+                        <b><span style="font-size:25px">현장실무</span></b>
+                    </div>
+                    <p>· Open API 기술 적용 사례 분석</p>
+                    <p>· 프로젝트 수행 / 작업 결과물</p>
+                    <p>(실제고객 니즈 기반)</p>
+                </div>
+            </div>
+
+            <div class="number_box top_image6">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">06월차</span>
+                        <b><span style="font-size:25px">프로젝트</span></b>
+                    </div>
+                    <p>· SNS 마케팅 자동화 스마트 웹앱 콘텐츠 개발</p>
+                    <p>(REST API, MVC 디자인 패턴, React)</p>
+                    <p>· GPS 인증 대구시민걷기 하이브리드 앱 개발</p>
+                    <p>(GPS API, Node.js, React)</p>
+                    <p>· 반응형 웹앱 SNS 연동 회원관리 시스템 개발</p>
+                    <p>(REST API, 반응형 웹앱, PHP, MySQL</p>
+                </div>
+            </div>
+
+            <div class="number_box top_image7">
+                <div class="number_box_top"></div>
+                <div class="number_box_bottom">
+                    <div class="number_box_bottom_title">
+                        <span style="font-size:20px">07월차</span>
+                        <b><span style="font-size:25px">프로젝트</span></b>
+                    </div>
+                    <p>· 반응형 웹앱 SNS 연동 회원관리 시스템 개발</p>
+                    <p>(REST API, 반응형 웹앱, PHP, MySQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="sub_section_7">
+        <div class="sub_section_7_wrap">
+            <div class="sub_section_7_title">
+                <h2>Open API를 활용한 스마트 웹&앱 콘텐츠<br> 실무개발자 양성과정 커리큘럼</h2>
+            </div>
+            <div class="sub_section_7_grid">
+                <div class="px-22">정규교과</div>
+                <div class="px-22">프로젝트</div>
+                <div class="px-22">현장실무</div>
+                <div>
+                    <h4>스마트문화앱 콘텐츠 설계</h4>
+                    <h4>스마트문화앱 UX 설계</h4>
+                    <h4>스마트문화앱 UI 디자인</h4>
+                    <h4>화면구현</h4>
+                    <h4>반응형웹 구현</h4>
+                    <h4>자바스크립트&제이쿼리</h4>
+                    <h4>Open API&공공데이터 활용</h4>
+                    <h4>리액트 프레임워크</h4>
+                    <h4>데이터베이스</h4>
+                    <h4>하이브리드앱 개발</h4>
+                    <div class="text_shadow1">Curriculum</div>
+                </div>
+                <div>
+                    <h4>프로젝트 01</h4>
+                    <p>Open API를 활용한 SNS 마케팅</p>
+                    <p>자동화 스마트 웹앱 콘텐츠 개발</p>
+                    <p>(REST API, MVC 디자인 패턴, React)</p>
+                    <h4 class="mt-40">프로젝트 02</h4>
+                    <p>Open API를 활용한 GPS 인증</p>
+                    <p>대구시민 걷기 하이브리드 앱 개발</p>
+                    <p>(GPS API, Node js, React) </p>
+                    <h4 class="mt-40">프로젝트 03</h4>
+                    <p>Oepn API를 활용한 반응형 웹앱</p>
+                    <p>SNS 연동 회원 관리 시스템 개발</p>
+                    <p>(Rest API, 반응형 웹앱, PHP, MySQL)</p>
+                    <div class="text_shadow2">Project</div>
+                </div>
+                <div>
+                    <h4>현장실무</h4>
+                    <p>Open API 기술 적용 사례 분석</p>
+                    <p>(실제 고객 니즈기반)</p>
+                    <p>프로젝트 수행 · 작업결과물</p>
+                    <div class="text_shadow3">Field Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const slider = document.querySelector('.sub_section_7_grid');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', e => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+    
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+    
+        slider.addEventListener('mousemove', e => {
+            if (!isDown) return; 
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = x - startX;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+    <section class="sub_section_9">
+        <div>
+            <div id="sub_section_9_title">
+                <h1>수료 후부터 취업까지!</h1>
+                <h1>실무중심 커리큘럼</h1>
+            </div>
+            <div id="sub_section_centerline">
+                <!-- 센터라인 -->
+                <div></div>
+                <div id="sub_section_center"></div>
+                <div></div>
+            </div>
+            <div id="sub_section_9_text_area">
+                <p>
+                    <span>다양하게 변화하는 수요예측과</span>
+                    <span>시장변화에 따른 사용자 요구를 분석 후</span>
+                    <span>스마트기기 플랫폼에 적용가능한 콘텐츠를 제작할 수 있습니다.</span>
+                    <span>본 과정 실무 중심 프로젝트를 통해 현업에 대한</span>
+                    <span>적응도를 높일 수 있으며 탄탄한 커리큘럼으로</span>
+                    <span>훈련생 분들이 취업하고자 하는 분야를 정하고 준비하는데</span>
+                    <span>아낌없이 지원 하고 있습니다.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sub_section_10">
+        <input id="sns_marketing" type="radio" name="tab" checked />
+        <input id="hybrid_app" type="radio" name="tab" />
+        <input id="sns_account_management" type="radio" name="tab" />
+        <div id="labelbundle">
+            <label class="labelstyle" for="sns_marketing">
+                <p>SNS마케팅 자동화</br>스마트 웹앱 콘텐츠 개발</p>
+            </label>
+            <label class="labelstyle" for="hybrid_app">
+                <p>GPS인증 대구시민 걷기</br>하이브리드 앱 개발</p>
+            </label>
+            <label class="labelstyle" for="sns_account_management">
+                <p>반응형 웹앱 SNS연동</br>회원관리 시스템 개발</p>
+            </label>
+        </div>
+        <div id="tab1" class="tab_item">
+            <div>
+                <img src="./images/sub_section_10_01-01.png" alt="">
+                <img src="./images/sub_section_10_01-02.png" alt="">
+                <img src="./images/sub_section_10_01-03.png" alt="">
+            </div>
+        </div>
+        <div id="tab2" class="tab_item">
+            <div>
+                <img src="./images/sub_section_10_02-01.png" alt="">
+                <img src="./images/sub_section_10_02-02.png" alt="">
+                <img src="./images/sub_section_10_02-03.png" alt="">
+            </div>
+        </div>
+        <div id="tab3" class="tab_item">
+            <div>
+                <img src="./images/sub_section_10_03-01.png" alt="">
+                <img src="./images/sub_section_10_03-02.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sub_section_12">
+        <div class="sub_section_12_title">
+            <h2>참여 기업</h2>
+        </div>
+        <div class="sub_section_12_company">
+            <div class="tooltip"><img src="./images/sub_section_12_01.png">
+                <span class="tooltiptext">대구 경북권 IT/CT 기업 커뮤니티 구성을 통한
+                    사업 교류 활성화</span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_02.png">
+                <span class="tooltiptext">공공기관 홈페이지 시스템 통합 프로젝트 운영 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_03.png">
+                <span class="tooltiptext">· Pre-스타기업 선정<br>
+                    · 통합장애관리 시스템<br>
+                    · 스마트주차관제시스템 구축 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_04.png">
+                <span class="tooltiptext">·공공기관 통합예약시스템<br>
+                    ·반응형 홈페이지 구축 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_05.png">
+                <span class="tooltiptext">· 법률,정책 데이터 플랫폼 시드 투자 유치 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_06.png">
+                <span class="tooltiptext">· 공공기관 통합정보시스템 구축<br>
+                    · 대학 업무포털 시스템 구축 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_07.png">
+                <span class="tooltiptext">· 벤처기업인증<br>
+                    · 신용보증기금 혁신 스타트업 4.0 선정 기업 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_08.png">
+                <span class="tooltiptext">IT 여성 기업인의 성장과 인재육성 지원 사업 운영</span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_09.png">
+                <span class="tooltiptext">· 위치기반 매칭 플랫폼 개발<br>
+                    · 착한 프로젝트 주관 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_10.png">
+                <span class="tooltiptext">의료정보통합 플랫폼 개발 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_11.png">
+                <span class="tooltiptext">· 2016 EBS 신성장 사업 선정<br>
+                    · 대한민국 기업대상 에듀테크 부문 기술혁신 대상 수상 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_12.png">
+                <span class="tooltiptext">스포츠센터 등 회원관리 및 예약시스템 구축 </span>
+            </div>
+            <div class="tooltip"><img src="./images/sub_section_12_13.png">
+                <span class="tooltiptext">통합 메세지, 리서치 관리 시스템구축 </span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="sub_section_13">
+        <h2>담당교수</h2>
+        <h3>YOUNGJIN TEACHER</h3>
+        <div class="sub_section_13_contents_box">
+            <div class="sub_section_13_content">
+                <div>
+                    <img src="./images/sub_section_13_01.png" style="width:300px;">
+                    <div class="sub_section_13_content_name">
+                        <h3>김정현 교수님</h3>
+                        <p>Adobe Program</p>
+                    </div>
+                </div>
+                <input type="checkbox" id="teacher01">
+                <label class="c_view" onclick="teacher01()" for="teacher01">경력보기</label>
+                <pre>
+    <b style="color:#587FFF">실무경력</b>
+        ·애니월드(Ani-world)
+        ·(주)위너스 커뮤니케이션즈
+        ·안커뮤니케이션즈 
+    
+    <b style="color:#587FFF">강의경력</b>
+        ·한국디자인학원 - 3D 그래픽 강의
+        ·한국IT교육원 - 3D 그래픽 강의
+        ·홍익대학교 - 3D 컴퓨터그래픽 강의
+        ·울산과학대학교 - 3D 그래픽 강의
+        ·영남이공대학교 - 3D 그래픽 강의
+        ·영동대학교 산업정보대학원
+    
+    <b style="color:#587FFF">자격사항</b>
+        ·직업훈련교사 (멀티미디어 3급)
+        ·직업훈련교사 (산업디자인 3급)
+        ·직업훈련교사 (사진 3급)
+        ·직업훈련교사 (발명품개발 3급)
+                </pre>
+            </div>
+            <div class="sub_section_13_content">
+                <div>
+                    <img src="./images/sub_section_13_02.png" style="width:300px;">
+                    <div class="sub_section_13_content_name">
+                        <h3>이선희 교수님</h3>
+                        <p>HTML5 / CSS3</p>
+                    </div>
+                </div>
+                <input type="checkbox" id="teacher01">
+                <label class="c_view" onclick="teacher01()" for="teacher01">경력보기</label>
+                <pre>
+    <b style="color:#587FFF">실무경력</b>
+        ·셀(CELL) 
+        ·(주)유비쿼터스사이언스테크놀러지
+        ·(주)세기미래기술
+        ·(주)아이씨코리아
+        ·미리온인터넷
+    
+    <b style="color:#587FFF">강의경력</b>
+        ·영진전문대학교 컴퓨터정보계열 전임교수
+        ·경북대학교 예술대학 외래교수
+        ·동국대학교 미술대학 외래교수
+        ·영남대학교 평생교육원 외래교수
+    
+    <b style="color:#587FFF">자격사항</b>
+        ·직업훈련교사 (디자인 2급)
+        ·직업훈련교사 (영상제작 2급)
+        ·직업훈련교사 (문화콘텐츠 2급)
+        ·직업훈련교사 (정보기술개발 2급)
+                </pre>
+
+            </div>
+            <div class="sub_section_13_content">
+                <div>
+                    <img src="./images/sub_section_13_03.png" style="width:300px;">
+                    <div class="sub_section_13_content_name">
+                        <h3>변정민 교수님</h3>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+                <input type="checkbox" id="teacher01">
+                <label class="c_view" onclick="teacher01()" for="teacher01">경력보기</label>
+                <pre>
+    <b style="color:#587FFF">실무경력</b>
+        ·정우인포텍 - 프로그램 개발
+        ·토인스월드프로그램 개발
+        ·경일엔지니어링 - 프로그램 개발
+    
+    <b style="color:#587FFF">강의경력</b>
+        ·한국정보기술교육원 
+        ·한국디지털직업전문학교
+        ·한국정보통신교육원 
+        ·경북산업직업전문학교
+        ·영진직업전문학교
+    
+    <b style="color:#587FFF">자격사항</b>
+        ·직업훈련교사 (전자 3급)
+        ·직업훈련교사 (정보처리 3급)
+        ·직업훈련교사 (통신 3급)
+        ·MCDBA, MCSE - microsoft
+        ·정보처리기사 - 한국산업인력공단
+    </pre>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="sub_section_14">
+        <h2>교육 신청 절차</h2>
+
+        <div class="textbox_wrap">
+            <div class="test_box">
+                <div>
+                    <img src="./images/sub_section_14_01.png" width="112" height="112">
+                </div>
+            </div>
+            <div class="test_box">
+                <div>
+                    <svg width="28.56" height="324.133" viewBox="0 0 28.56 324.133">
+                        <path d="M-5916,9064.134v-11.2l16-16.245-16-15.755v-11.467l27.56,27.222Z"
+                            transform="translate(5917 -8883)" fill="#5f9cff" />
+                        <path d="M-5916,8882v137.467l16,16-16,16v154.667" transform="translate(5917 -8882)" fill="none"
+                            stroke="#e3e3e3" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="inner_text_box">
+                    <div class="inner_text_box_top">1</div>
+                    <div class="inner_text_box_middle">훈련과정 상담 및 입학원서 작성</div>
+                    <div class="inner_text_box_bottom">상담을 통해 참여 여부<br> 결정 후 입학원서를 작성</div>
+                </div>
+            </div>
+            <div class="test_box">
+                <div>
+                    <svg width="28.56" height="324.133" viewBox="0 0 28.56 324.133">
+                        <path d="M-5916,9064.134v-11.2l16-16.245-16-15.755v-11.467l27.56,27.222Z"
+                            transform="translate(5917 -8883)" fill="#5f9cff" />
+                        <path d="M-5916,8882v137.467l16,16-16,16v154.667" transform="translate(5917 -8882)" fill="none"
+                            stroke="#e3e3e3" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="inner_text_box">
+                    <div class="inner_text_box_top">2</div>
+                    <div class="inner_text_box_middle">국민내일배움카드 신청</div>
+                    <div class="inner_text_box_bottom">온라인 : www.hrd.go.kr<br>
+                        오프라인 : 관할 고용센터</div>
+                </div>
+            </div>
+            <div class="test_box">
+                <div>
+                    <svg width="28.56" height="324.133" viewBox="0 0 28.56 324.133">
+                        <path d="M-5916,9064.134v-11.2l16-16.245-16-15.755v-11.467l27.56,27.222Z"
+                            transform="translate(5917 -8883)" fill="#5f9cff" />
+                        <path d="M-5916,8882v137.467l16,16-16,16v154.667" transform="translate(5917 -8882)" fill="none"
+                            stroke="#e3e3e3" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="inner_text_box">
+                    <div class="inner_text_box_top">3</div>
+                    <div class="inner_text_box_middle">과정 신청 및 승인</div>
+                    <div class="inner_text_box_bottom">온라인 : www.hrd.go.kr<br></div>
+                </div>
+            </div>
+            <div class="test_box">
+                <div>
+                    <svg width="28.56" height="324.133" viewBox="0 0 28.56 324.133">
+                        <path d="M-5916,9064.134v-11.2l16-16.245-16-15.755v-11.467l27.56,27.222Z"
+                            transform="translate(5917 -8883)" fill="#5f9cff" />
+                        <path d="M-5916,8882v137.467l16,16-16,16v154.667" transform="translate(5917 -8882)" fill="none"
+                            stroke="#e3e3e3" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="inner_text_box">
+                    <div class="inner_text_box_top">4</div>
+                    <div class="inner_text_box_middle">훈련과정 교육진행</div>
+                    <div class="inner_text_box_bottom">국민내일배움카드 발급 후
+                        훈련에 참여해 교육 수강</div>
+                </div>
+            </div>
+            <div class="test_box">
+                <div>
+                    <svg width="28.56" height="324.133" viewBox="0 0 28.56 324.133">
+                        <path d="M-5916,9064.134v-11.2l16-16.245-16-15.755v-11.467l27.56,27.222Z"
+                            transform="translate(5917 -8883)" fill="#5f9cff" />
+                        <path d="M-5916,8882v137.467l16,16-16,16v154.667" transform="translate(5917 -8882)" fill="none"
+                            stroke="#e3e3e3" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="inner_text_box">
+                    <div class="inner_text_box_top">5</div>
+                    <div class="inner_text_box_middle">훈련과정 수료</div>
+                    <div class="inner_text_box_bottom">과정종료 후 HRD-Net
+                        시스템에 수강평 입력 후
+                        과정 수료 마무리</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="sub_section_14_5">
+        <div class="sub_section_14_5_title">
+            <h2> <span style="color:#587FFF">최우수 훈련기관</span> 영진직업전문학교<br>
+                NCS교육기준을 준수한 과정부터 1:1맞춤형 <span style="color:#587FFF">취업지원</span>까지</h2>
+        </div>
+        <div class="sub_section_14_5_contents_wrap">
+            <div class="sub_section_14_5_content_box">
+                <div class="sub_section_14_5_content_top">최우수훈련기관</div>
+                <div class="sub_section_14_5_content_bottom">최신시설, 최신 훈련장비,
+                    우수한 교수진, 취업성과로
+                    고용노동부 직업능력심사
+                    평가원 인증 전국 최우수
+                    훈련기관 선정</div>
+            </div>
+            <div class="sub_section_14_5_content_box">
+                <div class="sub_section_14_5_content_top">최신장비 도입</div>
+                <div class="sub_section_14_5_content_bottom">쾌적한 훈련 환경과 최신 장비
+                    도입으로 교육적 환경 우수</div>
+            </div>
+            <div class="sub_section_14_5_content_box">
+                <div class="sub_section_14_5_content_top">1:1취업매칭 서비스</div>
+                <div class="sub_section_14_5_content_bottom">교육생 특성을 고려한 1:1 맞춤
+                    컨설팅을 통해 개인맞춤 구인구직
+                    매칭 서비스 등 토탈솔루션 제공</div>
+            </div>
+            <div class="sub_section_14_5_content_box">
+                <div class="sub_section_14_5_content_top">훈련품질 우수성</div>
+                <div class="sub_section_14_5_content_bottom">체계적인 이수자 평가 시스템을
+                    통해 NCS기반 교육훈련을
+                    효과적, 효율적으로 운영 및
+                    개선하여 A등급 획득 (47개 과정)</div>
+            </div>
+        </div>
+        <div class="sub_section_14_5_bottom_link">
+            <div>
+                <img src="./images/sub_section_14_5_01.png" width="40px">
+                <div>온라인 입학상담 →</div>
+            </div>
+            <div>
+                <img src="./images/sub_section_14_5_02.png" width="40px">
+                <div>온라인 수강신청 →</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="sub_section_15">
+        <div class="sub_section_15_wrap">
+            <div>
+                <h3>1:1 맞춤형 취업지원 시스템</h3>
+                <p>교육훈련 종료 후, 오직 훈련생만을 위한 1:1 맞춤 면접코칭 실시</p>
+            </div>
+            <div>
+                <h4>취업지원 프로그램 소개</h4>
+                <p>다양한 취업지원 시스템을 지원받을 수 있도록 취업지원센터 소개</p>
+            </div>
+            <div>
+                <h4>이력서 및 자소서 컨설팅</h4>
+                <p>이력서 작성법 및 자소서 컨설팅을 통한 입사지원 분석</p>
+            </div>
+            <div>
+                <h4>1:1 모의 면접 실시</h4>
+                <p>면접트레이닝 및 이미지메이킹 서비스, 동행명접 지원</p>
+            </div>
+            <div>
+                <h4>인재매칭 서비스</h4>
+                <p>기업·기관·협회와 MOU체결을 통해 맞춤 인재매칭 서비스</p>
+            </div>
+            <div>
+                <h4>취업성공</h4>
+                <p>성공적인 취업을 위한 다양한 지원</p>
+            </div>
+    </section>
+
+    <footer>
+        <footer>
+            <div id="footer">
+                <div class="footer_top">개인정보보호정책 | 메일주소무단수집거부</div>
+                <div class="footer_bottom">
+                    <div>회사명 : 영진직업전문학교</div>
+                    <div>대표자 : 곽승호, 차영숙 | cha8877@hanmail.net</div>
+                    <div>Tel : 053-983-8877 | Fax : 053-722-2423</div>
+                    <div>개인정보보호책임자 : 곽창운 | 사업자번호 : 502-95-07029</div>
+                    <div>701-835 대구광역시 동구 화랑로 525(용계동) | 조경실습장 : 대구 동구 도동 806-21</div>
+                    <div><br></div>
+                    <div>copyright © 대구 국비지원 무료교육 영진직업전문학교. All Rights Reserved.</div>
+                </div>
+                <div class="sns">
+                    <!-- 페이스북 -->
+                    <a href="https://www.facebook.com/yjjob/">
+                        <svg width="33.853" height="33.853" viewBox="0 0 33.853 33.853">
+                            <g transform="translate(0 0)">
+                                <path
+                                    d="M118.023,224.873a16.927,16.927,0,1,0-19.571,16.721V229.766h-4.3v-4.893h4.3v-3.729c0-4.242,2.527-6.586,6.393-6.586a26.038,26.038,0,0,1,3.789.331v4.166H106.5a2.446,2.446,0,0,0-2.758,2.643v3.175h4.695l-.751,4.893h-3.944v11.828A16.931,16.931,0,0,0,118.023,224.873Z"
+                                    transform="translate(-84.17 -207.946)" fill="#fff" />
+                                <path
+                                    d="M137.515,249.521l.751-4.893h-4.695v-3.175a2.446,2.446,0,0,1,2.758-2.643h2.135v-4.166a26.038,26.038,0,0,0-3.789-.331c-3.867,0-6.393,2.343-6.393,6.586v3.729h-4.3v4.893h4.3v11.828a17.109,17.109,0,0,0,5.29,0V249.521Z"
+                                    transform="translate(-114 -227.701)" fill="#013D79" />
+                            </g>
+                        </svg>
+                    </a>
+
+                    <!-- 인스타 -->
+                    <a href="https://www.instagram.com/accounts/login/?next=/yjjob8877/">
+                        <svg width="34" height="34" viewBox="0 0 34 34">
+                            <g transform="translate(0.242 0.068)">
+                                <circle cx="17" cy="17" r="17" transform="translate(-0.242 -0.068)" fill="#fff" />
+                                <g transform="translate(6.702 6.186)">
+                                    <g>
+                                        <path
+                                            d="M568.068,234.85c2.822,0,3.156.011,4.271.061a5.846,5.846,0,0,1,1.962.364,3.5,3.5,0,0,1,2.006,2.006,5.85,5.85,0,0,1,.364,1.962c.051,1.115.061,1.449.061,4.271s-.011,3.156-.061,4.27a5.85,5.85,0,0,1-.364,1.962,3.5,3.5,0,0,1-2.006,2.006,5.852,5.852,0,0,1-1.962.364c-1.114.051-1.448.061-4.271.061s-3.156-.011-4.271-.061a5.851,5.851,0,0,1-1.962-.364,3.5,3.5,0,0,1-2.006-2.006,5.846,5.846,0,0,1-.364-1.962c-.051-1.115-.061-1.449-.061-4.271s.011-3.156.061-4.271a5.845,5.845,0,0,1,.364-1.962,3.5,3.5,0,0,1,2.006-2.006,5.845,5.845,0,0,1,1.962-.364c1.115-.051,1.449-.061,4.271-.061m0-1.9c-2.87,0-3.23.012-4.357.064a7.758,7.758,0,0,0-2.565.491,5.4,5.4,0,0,0-3.091,3.091,7.759,7.759,0,0,0-.491,2.565c-.051,1.127-.064,1.487-.064,4.357s.012,3.23.064,4.357a7.759,7.759,0,0,0,.491,2.565,5.4,5.4,0,0,0,3.091,3.091,7.758,7.758,0,0,0,2.565.491c1.127.051,1.487.064,4.357.064s3.23-.012,4.357-.064a7.758,7.758,0,0,0,2.565-.491,5.4,5.4,0,0,0,3.091-3.091,7.759,7.759,0,0,0,.491-2.565c.052-1.127.064-1.487.064-4.357s-.012-3.23-.064-4.357a7.759,7.759,0,0,0-.491-2.565,5.4,5.4,0,0,0-3.091-3.091,7.758,7.758,0,0,0-2.565-.491c-1.127-.051-1.487-.064-4.357-.064Z"
+                                            transform="translate(-557.5 -232.946)" fill="#013D79" />
+                                        <path
+                                            d="M583.6,253.622a5.427,5.427,0,1,0,5.427,5.427A5.427,5.427,0,0,0,583.6,253.622Zm0,8.95a3.523,3.523,0,1,1,3.523-3.523A3.523,3.523,0,0,1,583.6,262.572Z"
+                                            transform="translate(-573.035 -248.481)" fill="#013D79" />
+                                        <ellipse cx="1.268" cy="1.268" rx="1.268" ry="1.268"
+                                            transform="translate(14.941 3.659)" fill="#013D79" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <!-- 카카오톡 -->
+                    <a href="https://pf.kakao.com/_bItTxd">
+                        <svg width="34" height="34" viewBox="0 0 34 34">
+                            <g transform="translate(-978.498 -1318.155)">
+                                <path
+                                    d="M995.5,1318.155a17,17,0,1,0,17,17A17,17,0,0,0,995.5,1318.155Zm10.844,20.354a10.215,10.215,0,0,1-3.7,3.486,13.615,13.615,0,0,1-4.626,1.634,14.926,14.926,0,0,1-2.354.205,14.36,14.36,0,0,1-2.149-.13.37.37,0,0,0-.286.07c-1.415.993-2.829,1.988-4.29,2.913-.177.112-.363.212-.546.316a.577.577,0,0,1-.209.072c-.233.031-.37-.106-.321-.338.087-.407.208-.806.322-1.206q.432-1.516.867-3.03c.026-.089.017-.131-.075-.177a11.125,11.125,0,0,1-3.585-2.8,8.187,8.187,0,0,1-1.878-4.031,7.628,7.628,0,0,1,.877-4.928,10,10,0,0,1,3.438-3.614,13.418,13.418,0,0,1,4.993-1.934,14.952,14.952,0,0,1,4.022-.176,13.491,13.491,0,0,1,6.94,2.533,9.252,9.252,0,0,1,3.142,3.833A7.6,7.6,0,0,1,1006.342,1338.509Z"
+                                    fill="#fff" />
+                                <path
+                                    d="M1065.961,1373.848c-.055-.072-.058-.111.01-.178.491-.484.977-.974,1.465-1.461a.625.625,0,0,0,.174-.266.677.677,0,0,0-.321-.753.587.587,0,0,0-.766.1q-.894.893-1.787,1.788a.84.84,0,0,0-.08.111l-.042-.029v-.1c0-.454,0-.909,0-1.363a.7.7,0,1,0-1.39.005q0,2.373,0,4.746a.715.715,0,0,0,.064.3.694.694,0,0,0,.752.4.683.683,0,0,0,.575-.664c.006-.479,0-.958,0-1.438,0-.081.159-.328.228-.324.088.006.1.113.161.167a.417.417,0,0,1,.037.049c.483.639.963,1.28,1.449,1.917a.7.7,0,1,0,1.1-.854Q1066.777,1374.923,1065.961,1373.848Z"
+                                    transform="translate(-63.386 -39.532)" fill="#fff" />
+                                <path
+                                    d="M1029.548,1373.727c-.259-.682-.515-1.364-.778-2.044a.989.989,0,0,0-1.075-.651,1.022,1.022,0,0,0-.781.687q-.71,1.865-1.416,3.732a6.009,6.009,0,0,0-.312.9c-.1.5.065.748.552.82a.624.624,0,0,0,.755-.435c.087-.227.177-.453.259-.681a.117.117,0,0,1,.133-.091c.322,0,.644,0,.966,0s.636,0,.954,0a.13.13,0,0,1,.148.105c.083.233.187.458.26.694a.57.57,0,0,0,.578.414,1.067,1.067,0,0,0,.436-.073.443.443,0,0,0,.306-.41,1.482,1.482,0,0,0-.111-.666Q1029.987,1374.876,1029.548,1373.727Zm-1.881,1c-.136,0-.273,0-.409,0-.089,0-.1-.018-.072-.1.18-.5.355-1,.532-1.5l.131-.374.7,1.976Z"
+                                    transform="translate(-34.907 -39.548)" fill="#fff" />
+                                <path
+                                    d="M1014.1,1372.331a.683.683,0,0,0-.191-1.343q-1.765,0-3.53,0a.682.682,0,1,0,.006,1.363c.31,0,.62.007.929,0,.115,0,.134.035.133.139,0,.661,0,1.322,0,1.982s0,1.329,0,1.994a.693.693,0,0,0,.917.663.681.681,0,0,0,.479-.7q0-1.976,0-3.951c0-.094.02-.128.121-.126.31.007.619,0,.929,0A.787.787,0,0,0,1014.1,1372.331Z"
+                                    transform="translate(-23.329 -39.525)" fill="#fff" />
+                                <path
+                                    d="M1050.881,1375.791q-.681-.008-1.363,0c-.109,0-.137-.026-.137-.136,0-1.292,0-2.585,0-3.878a.965.965,0,0,0-.021-.258.713.713,0,0,0-.758-.524.7.7,0,0,0-.641.7c0,.785,0,1.569,0,2.354s0,1.577,0,2.366a.632.632,0,0,0,.607.643q1.177.014,2.354,0a.636.636,0,0,0,.609-.666A.646.646,0,0,0,1050.881,1375.791Z"
+                                    transform="translate(-51.97 -39.53)" fill="#fff" />
+                            </g>
+                        </svg>
+                    </a>
+
+                    <!-- 네이버 -->
+                    <a href="https://blog.naver.com/yjjob8877">
+                        <svg width="34" height="34" viewBox="0 0 34 34">
+                            <g transform="translate(-0.025 0.068)">
+                                <circle cx="17" cy="17" r="17" transform="translate(0.025 -0.068)" fill="#fff" />
+                                <text id="blog" transform="translate(2.025 20.932)" fill="#013D79" font-size="13"
+                                    font-family="NotoSansKR-Black, Noto Sans KR" font-weight="800">
+                                    <tspan x="0" y="0">blog</tspan>
+                                </text>
+                            </g>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </footer>
+
+
+    <!-- 서클 네비 -->
+    <div class="drag_circle_menu">
+        <div class="drag_circle_menu_wrap">
+            <div class="drag_circle_menu_base">
+                <svg class="gb_Ve" focusable="false" viewBox="0 0 24 24">
+                    <path
+                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                    </path>
+                </svg>
+            </div>
+            <span style="--i:1;"><a href="#"><i class='bx bxs-arrow-to-top'></i></a></span>
+            <span style="--i:2;"><a href="http://www.yjjob.or.kr/p/?j=44"><i class='bx bx-question-mark'></i></a></span>
+            <span style="--i:3;"><a href="#"><i class='fa-solid fa-comment'></i></a></span>
+            <span style="--i:4;"><a href="http://www.yjjob.or.kr/p/?j=21"><i class='bx bxs-map'></i></a></span>
+            <span style="--i:5;"><a href="tel:053-983-8877"><i class='bx bxs-phone-call'></i></a></span>
+        </div>
+    </div>
+    <!-- // 서클 네비 -->
+
+        <!-- 서클 자바스크립트 -->
+        <script src="js/circle_button.js"></script>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/sub_page.js"></script>
+
+
+</body>
+
+</html>

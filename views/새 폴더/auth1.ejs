@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+  
+    <link rel="stylesheet" href="/stylesheets/auth.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+  
+  
+    <header class="header">
+        <a href="/">
+          <img src="/assets/logo.png" alt="" width="100" height="50">
+        </a>
+        <nav>
+          <ul>
+            <a href="/auth">
+              <li>로그인</li>
+            </a>
+           
+          </ul>
+        </nav>
+      </header>
+      <div class="containerAuth">
+        <section class='content-box'>
+          <h1>로그인 하기</h1>
+          <form class='form' method="POST" action="/login">
+            <div class='control'>
+              <label htmlFor="email">Email Address</label>
+              <input type="text" name="email" />
+            </div>
+            <div className='control'>
+              <label htmlFor="password">Password</label>
+              <input type="password" name="password">
+            </div> 
+            <button type="submit">로그인</button>
+          </form>
+          <div class='controls'>
+            <div class='actions' id="naver_id_login">
+                <button class="naver" type="button" onclick="location.href='/auth/naver'">네이버 로그인</button>
+              </div>
+              <div class='actions'>
+                <button class="kakao" type="button" onclick="location.href='/auth/kakao'">카카오 로그인</button>
+              </div>
+        </div>
+        </section>
+        <div class='footer' >
+          <a>create an account</a>
+        </div>
+    
+      </div>
+    </div>
+</body>
+</html>

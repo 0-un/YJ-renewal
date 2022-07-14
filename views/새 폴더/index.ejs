@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영진직업전문학교 리뉴얼</title>
+    <!--외부 스타일 시트 링크-->
+    
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+    <!-- <link rel="stylesheet" href="./css/main_caruusel.css"> -->
+    <script src="https://kit.fontawesome.com/b11e5da617.js" crossorigin="anonymous"></script>
+
+    <!-- 스크롤 애니메이션  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
+    <!-- 토글 메뉴 및 캐러셀 구현을 위한 제이쿼리 플러그인 스크립트 소스  연결 -->
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/swiper-bundle.js"></script>
+    <!-- 협력업체 캐러셀 3번째 -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- 스코롤 애니메이션 자바스크립트 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 챗봇 자바스크립트 -->
+    <script src="./js/chatbot.js"></script>
+    
+    <!-- 모집과정 캐러셀 -->
+    <script src="./js/slick.min.js"></script>
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <!-- 협력업체 css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        
+            <div id="icon">
+            
+                <div class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+     
+                <!-- <a href="#" id="toggle"><img src="./images/menu.png"></a> -->
+                 <div  id="logo"><a href="#"><img src="./img/main_logo.png"></a> </div>
+                 <div> <a href="#" id="my_page"><img src="./images/my_page.png"></a></div>
+                 
+            </div> 
+  
+
+        <!--PC버전 상단바-->
+        
+        <div class="header_wrapper">
+            <div id="subb_nav">
+                <ul>
+                    <li><%= displayName %></li>
+                    <% if(token.length == 0) {%>
+                        <a href="/auth">
+                          <li>로그인</li>
+                        </a>
+                       <% } else { %>
+                        <a href="/logout?token=<%= token %>&div=<%= div %>">
+                          <li>로그아웃</li>
+                        </a>
+                        <% } %>
+                   
+                    <li><a href="http://www.yjjob.or.kr/_module/poll/login.php">설문조사</a></li>
+                    <li><a href="http://www.yjjob.or.kr/_module/include/_ncs_login.php">NCS평가</a></li>
+                    <li><a href="http://www.yjjob.or.kr/_module/include/_test_login.php">시험응시</a></li>
+                    <li><a href="http://www.yjjob.or.kr/p/?j=2&rPath=VmtWb2FrOVdRbEpRVkRBOStN">회원가입</a></li>
+                    
+                    <li><a href="/auth">로그인</a></li>
+                    <li><a href="http://www.yjjob.or.kr/p/?j=6">사이트맵</a></li>
+                </ul>
+            </div>
+            
+            
+            <nav id="nav">
+                
+                <ul id="main_nav">
+                    <a href="#" id="logo">
+                         <div>
+                        <img src="./img/main_logo.png">
+                         </div>
+                    </a> 
+           
+                  
+                                    <li><a href="#">학교소개</a>
+                                        <ul class="sub_nav">
+                                                    <li><a href="#">인사말</a></li>
+                                                    <li><a href="#">조직도 및 연혁</a></li>
+                                                    <li><a href="">교육시스템</a></li>
+                                                    <li><a href="">시설안내</a></li>
+                                                    <li><a href="">교직원 소개</a></li>
+                                                    <li><a href="">교수 채용</a></li>
+                                                    <li><a href="">오시는 길</a></li>
+                                                    <div class="main_boxcard" >
+                                                        <div class="nav_incardbox">
+                                                                <div class="card_text">
+                                                                    <a href="https://www.hrd.go.kr/hrdp/gi/pgibo/PGIBO0100T.do">
+                                                                   <img src="./img/그룹 391.svg">
+                                                                   </a>
+                                                                </div>
+                                                                    <!-- <div class="card_img">
+                                                                        <img src="./images/creditcard_shadow.png">
+                                                                    </div> -->
+                                                        
+                                                    </div>
+                                                    <!-- <div class="nav_incardbox" style="background-color: #035AA6;">
+                                                                    <div class="card_text_2">
+                                                                        <p><a href="https://www.kua.go.kr/uaptm010/selectMain.do">국민취업<br>지원제도</a></p>
+                                                                    </div>
+                                                                    <div class="card_2_img">
+                                                                        <img src="./images/system_shadow.png">
+                                                                    </div>
+                                                                </div>
+                                                    </div> -->
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">모집과정</a>
+                                             <ul class="sub_nav">
+                                                        <li><a href="#">현재모집중인과정</a></li>
+                                                        <li><a href="./세부페이지_영진직업전문학교리뉴얼0407/index.html">진행중인과정</a></li>
+                                                        <li><a href="">연간모집과정</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="#">과정소개</a>
+                                            <ul class="sub_nav">
+                                                        <li><a href="#">IT·SW</a></li>
+                                                        <li><a href="#">전기공사</a></li>
+                                                        <li><a href="#">기계설계</a></li>
+                                                        <li><a href="#">디자인</a></li>
+                                                        <li><a href="#">용접</a></li>
+                                                        <li><a href="#">공조냉동</a></li>
+                                                        <li><a href="#">조경/중장비</a></li>
+                                                        <li><a href="#">가구/공예</a></li>
+                                                        <li><a href="#">경영회계</a></li>
+                                                        <li><a href="#">패션봉제</a></li>
+                                                        <li><a href="#">요리</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="#">입학상담</a>
+                                            <ul class="sub_nav">
+                                                        <li><a href="#">온라인접수</a></li>
+                                                        <li><a href="#">자주하는 질문</a></li>
+                                                        <li><a href="#">입학상담</a></li>
+                                                        <li><a href="#">접수상태확인</a></li>
+                                                        <li><a href="#">일반고직업반 입학상담</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="#">포트폴리오</a>
+                                        <ul class="sub_nav">
+                                                    <li><a href="#">송암전</a></li>
+                                                    <li><a href="#">수강생작</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">커뮤니티</a>
+                                            <ul class="sub_nav">
+                                                        <li><a href="#">공지사항</a></li>
+                                                        <li><a href="#">영진소식</a></li>
+                                                        <li><a href="#">수강후기</a></li>
+                                                        <li><a href="#">학교에 바란다</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="#">취업센터</a>
+                                            <ul class="sub_nav">
+                                                        <li><a href="#">업체 채용 소식</a></li>
+                                                        <li><a href="#">업무 협약 소식</a></li>
+                                                        <li><a href="#">취업 센터 소식</a></li>
+                                                        <li><a href="#">취업 성공 인터뷰</a></li>
+                                                        <li><a href="#">직종소개</a></li>
+                                                        
+                                            </ul>
+                                    </li>
+                                                    
+                                </ul>
+                            </nav>
+                        
+                   
+            
+                    </div>
+
+
+
+
+
+
+
+
+        <!-- 모바일 내비 -->
+        <nav id="nav">
+            <div id="nav_wrapper">
+        <ul>
+                    <li class="sub_li1">
+                        <a href="#">학교소개</a>
+                    </li>
+                    <!--sub menu1-->
+                    <div id="sub_menu1">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="">조직도 및 연혁</a></li>
+                            <li><a href="">교육시스템</a></li>
+                            <li><a href="">시설안내</a></li>
+                            <li><a href="">교직원 소개</a></li>
+                            <li><a href="">교수 채용</a></li>
+                            <li><a href="">오시는 길</a></li>
+                    </div>
+                </li>
+                    <li class="sub_li2">
+                        <a href="#">모집과정</a>
+                    </li>
+                    <!--sub menu2-->
+                    <div id="sub_menu2">
+                            <li><a href="">현재모집중인과정</a></li>
+                            <li><a href="./세부페이지_영진직업전문학교리뉴얼0407/index.html">진행중인과정</a></li>
+                            <li><a href="">연간모집과정</a></li>
+                    </div>
+                    
+                    <li class="sub_li3">
+                        <a href="#">과정소개</a>
+                    </li>
+                    <!--sub menu3-->
+                    <div id="sub_menu3">
+                            <li><a href="#">IT·SW</a></li>
+                            <li><a href="#">전기공사</a></li>
+                            <li><a href="#">기계설계</a></li>
+                            <li><a href="#">디자인</a></li>
+                            <li><a href="#">용접</a></li>
+                            <li><a href="#">공조냉동</a></li>
+                            <li><a href="#">조경/중장비</a></li>
+                            <li><a href="#">가구/공예</a></li>
+                            <li><a href="#">경영회계</a></li>
+                            <li><a href="#">패션봉제</a></li>
+                            <li><a href="#">요리</a></li>
+                    </div>
+                    
+                    <li class="sub_li4">
+                        <a href="#">입학상담</a>
+                    </li>
+                    <!--sub menu4-->
+                    <div id="sub_menu4">
+                            <li><a href="#">온라인접수</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">접수상태확인</a></li>
+                            <li><a href="#">일반고직업반 입학상담</a></li>
+                    </div>
+                    
+                    <li class="sub_li5">
+                        <a href="#">포트폴리오</a>
+                    </li>
+                    <!--sub menu5-->
+                    <div id="sub_menu5">
+                            <li><a href="#">송암전</a></li>
+                            <li><a href="#">수강생작</a></li>
+                    </div>
+                    
+                    <li class="sub_li6">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <!--sub menu6-->
+                    <div id="sub_menu6">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">영진소식</a></li>
+                                <li><a href="#">수강후기</a></li>
+                                <li><a href="#">학교에 바란다</a></li>
+                    </div>
+                    
+                    <li class="sub_li7">
+                        <a href="#">취업센터</a>
+                    </li>
+                    <!--sub menu7-->
+                    <div id="sub_menu7">
+                                <li><a href="#">업체 채용 소식</a></li>
+                                <li><a href="#">업무 협약 소식</a></li>
+                                <li><a href="#">취업 센터 소식</a></li>
+                                <li><a href="#">취업 성공 인터뷰</a></li>
+                                <li><a href="#">직종소개</a></li>
+                    </div>
+
+                    <div class="sub2">
+                            <div class="sub2_li">
+                                <a href="#">설문조사</a>
+                            </div>
+                            <div class="sub2_li1">
+                                <a href="#">NCS평가</a>
+                            </div>
+                    </div>
+                                      
+                </ul>
+            </div>
+            </nav>
+    </header>
+
+
+<div id="blank">뒤 공간</div>
+
+<!-- 메인캐러셀             -->
+<section id="main_ca">
+        <div class="swiper mySwiper" id="swiper_div">
+</div>
+
+
+
+<!-- 취업후기 & 취업현황 -->
+<div id="wrapper_job">
+    <section class="card">
+        <div class="card_text">
+            <p><a href="https://www.hrd.go.kr/hrdp/gi/pgibo/PGIBO0100T.do">국민내일<br>배움카드</a></p>
+        </div>
+            <div class="card_img">
+                <img src="./images/creditcard_shadow.png">
+            </div>
+    </section>
+
+
+    <section class="card_2">
+            <div class="card_text_2">
+                <p><a href="https://www.kua.go.kr/uaptm010/selectMain.do">국민취업<br>지원제도</a></p>
+            </div>
+            <div class="card_2_img">
+                <img src="./images/system_shadow.png">
+            </div>
+    </section>
+</div>
+</section>
+<!-- 현재 모집 과정 -->
+    <section class="now">
+        <div class="now_text">
+            <div id="now_text_1">현재모집과정</div>
+            <div id="now_text_2">영진직업전문학교에서 만나볼 수 있는 다양한 교육</div>
+                <div class="filter">
+                    <select name="" id="" class="js-tp-voucher-filter form-control">
+                        <div class="filter_menu">
+                            <option value="__">전체과정</option>
+                            <option value="IT">IT.SW</option>
+                            <option value="전기">전기공사</option>
+                            <option value="기계">기계설계</option>
+                            <option value="디자인">디자인</option>
+                            <option value="용접">용접</option>
+                            <option value="냉동">공조냉동</option>
+                            <option value="조경">조경/중장비</option>
+                            <option value="가구">가구/공예</option>
+                            <option value="경영">경영회계</option>
+                            <option value="패션">패션봉제</option>
+                            <option value="요리">요리</option>
+                        </div>
+                    </select>
+                </div>
+        </div>
+        <div class="now_img">
+            <img src="./images/chatbot.svg">
+        </div>
+
+    </section>
+<section class=".now_cs">
+    
+    
+    
+    
+    
+        <div class="content">
+         
+            <div class="js-tp-slider-filter">
+              <div data-filter="조경"><img src="./img/carousel2_1.png" alt=""></div>
+              <div data-filter="가구"><img src="./img/carousel2_2.png" alt=""></div>
+              <div data-filter="디자인"><img src="./img/carousel2_3.png" alt=""></div>
+              <div data-filter="전기"><img src="./img/carousel2_4.png" alt=""></div>
+              <div data-filter="요리"><img src="./img/carousel2_5.png" alt=""></div>
+              <div data-filter="IT"><img src="./img/carousel2_6.png" alt=""></div>
+              <div data-filter="디자인"><img src="./img/carousel2_7.png" alt=""></div>
+              <div data-filter="냉동"><img src="./img/carousel2_8.png" alt=""></div>
+              <div data-filter="기계"><img src="./img/carousel2_9.png" alt=""></div>
+              <div data-filter="조경"><img src="./img/carousel2_10.png" alt=""></div>
+              <div data-filter="IT"><img src="./img/carousel2_11.png" alt=""></div>
+              <div data-filter="IT"><img src="./img/carousel2_12.png" alt=""></div>
+              <div data-filter="용접"><img src="./img/carousel2_13.png" alt=""></div>
+              <div data-filter="경영"><img src="./img/carousel2_14.png" alt=""></div>
+              <div data-filter="패션"><img src="./img/carousel2_15.png" alt=""></div>
+        
+            </div>
+          </div>
+</section>
+<!-- 홍보영상 -->
+<div data-aos="fade-up" data-aos-duration="1500">
+    <section class="video_1">
+        <div class="video">
+            <div class="video_text">
+                <p>영진알아보기</p>
+            </div>
+
+            <div class="video-wrap">
+                <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/SklOfbDKQOM" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="PC_video_text"  data-aos="fade-up" data-aos-duration="2000"> 
+                <a>늘 새롭고 유익한 정보가 가득한</a>
+                <div class="PC_video_button">
+                    <a href="https://www.youtube.com/channel/UC38eIT52Ir82OpjTEuTrB-Q">유튜브 구경가기</a>
+                </div>
+            </div>
+</div>
+
+
+    
+            <!-- <video src="./video/video1.mp4"></video> -->
+            <!-- <iframe src="https://www.youtube.com/embed/SklOfbDKQOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+       
+    </div>
+    <!--PC버전 홍보영상 텍스트-->
+
+</section>
+
+
+
+<!-- 취업후기 -->
+<div class="PC_job">
+    <section class="jop" >
+        <div class="jop_text"   data-aos="fade-right"  data-aos-duration="2000" >
+            <h1>취업후기</h1>
+            <h2>더보기 +</h2>
+            <div class="swiper asd">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/그룹 359.svg"></div>
+                    <div class="swiper-slide"><img src="./img/그룹 360.svg"></div>
+                    <div class="swiper-slide"><img src="./img/그룹 361.svg"></div>
+                    <div class="swiper-slide"><img src="./img/그룹 362.svg"></div>
+                    <div class="swiper-slide"><img src="./img/그룹 363.svg"></div>
+                    <div class="swiper-slide"><img src="./img/그룹 364.svg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    
+    </section>
+
+
+
+        
+        <!-- 이달의 취업소식 -->
+
+        <section class="jop_news" data-aos="fade-left" data-aos-duration="2000" >
+            <div class="jop_text" >
+                <div id="Month">
+                    <h1>이달의 취업소식</h1>
+                </div>
+                    <div class="more">
+                        <h3>더보기 +</h3>
+                    </div>
+            </div>
+
+
+        <div class="class_job">
+            <ul>
+                <li><p>3D기계설계가공</p>
+                    <p>엘*</p>
+                    <p>강*준</p>
+                </li>
+                <li><p>한식 출장요리 및 양식 브런치</p>
+                    <p>나*</p>
+                    <p>정*철</p>
+                </li>
+                <li><p>ERP운용실무 및 회계사무원 양성</p>
+                    <p>태*종합..</p>
+                    <p>최*숙</p>
+                </li>
+                <li><p>ERP운용실무 및 회계사무원 양성</p>
+                    <p>퓨*마인드</p>
+                    <p>김*경</p>
+                </li>
+                <li><p>ERP운용실무 및 회계사무원 양성</p>
+                    <p>대*전자</p>
+                    <p>장*석</p>
+                </li>
+                <li><p>ERP운용실무 및 회계사무원 양성</p>
+                    <p>동*엘엔씨</p>
+                    <p>정*화</p>
+                </li>
+                <li><p>전기공사 및 전기관리자</p>
+                    <p>에*와이..</p>
+                    <p>김*홍</p>
+                </li>
+                <li><p>전기공사 및 전기관리자</p>
+                    <p>귀*라미</p>
+                    <p>김*준</p>
+                </li>
+                <li><p>스마트패션 디자인</p>
+                    <p>플*시21</p>
+                    <p>윤용</p>
+                </li>
+            </ul>
+        </div>
+
+        </section>
+</div>
+
+<!-- 포트폴리오 -->
+<section class="portfolio">
+    <h1>포트폴리오</h1>
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">디자인</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">IT SW</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">기계설계</label>
+        <input type="radio" name="tabmenu" id="tab04">
+        <label for="tab04">용접/공조</label>
+        <input type="radio" name="tabmenu" id="tab05">
+        <label for="tab05">패션디자인</label>
+        <input type="radio" name="tabmenu" id="tab06">
+        <label for="tab06">가구/공예</label>
+    </div>
+
+<!-- Swiper -->
+<div class="swiper Portfolio_cs">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_1.png"  />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_4.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_5.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ga_6.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_1.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_2.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_3.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_4.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_5.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/ki_6.gif" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_1.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_4.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_5.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/design_6.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/go-1.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/go-2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/go-3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/yo-1.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/yo-2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/yo-3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-1.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-4.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-5.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/fa-6.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_1.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_4.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_5.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="./portfolio_img/it_6.png" />
+        </div>
+        
+
+        
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"><img src="./images/right.png" alt=""></div>
+    <div class="swiper-button-prev"><img src="./images/left.png" alt=""></div>
+</div>
+</section>
+
+
+
+<!-- 협력업체 캐러셀 -->
+<section class="company">
+    <!-- <h1>협력업체 캐러셀</h1> -->
+
+  
+
+    <div class="bxslider">
+        <div><img src="./img/logo1.jpg" alt=""></div>
+        <div><img src="./img/logo2.jpg" alt=""></div>
+        <div><img src="./img/logo3.jpg" alt=""></div>
+        <div><img src="./img/logo4.jpg" alt=""></div>
+        <div><img src="./img/logo5.jpg" alt=""></div>
+        <div><img src="./img/logo6.jpg" alt=""></div>
+        <div><img src="./img/logo7.jpg" alt=""></div>
+        <div><img src="./img/logo8.jpg" alt=""></div>
+        <div><img src="./img/logo9.jpg" alt=""></div>
+        <div><img src="./img/logo10.jpg" alt=""></div>
+        <div><img src="./img/logo11.jpg" alt=""></div>
+        <div><img src="./img/logo12.jpg" alt=""></div>
+        <div><img src="./img/logo13.jpg" alt=""></div>
+      </div>
+
+        
+    <!-- 슬라이드 효과
+        <ul class="slider">
+            <div class="company_ca">
+                <li><img src="./img/logo1.jpg" alt=""></li>
+                <li><img src="./img/logo2.jpg" alt=""></li>
+                <li><img src="./img/logo3.jpg" alt=""></li>
+                <li><img src="./img/logo4.jpg" alt=""></li>
+                <li><img src="./img/logo5.jpg" alt=""></li>
+                <li><img src="./img/logo6.jpg" alt=""></li>
+                <li><img src="./img/logo7.jpg" alt=""></li>
+                <li><img src="./img/logo8.jpg" alt=""></li>
+                <li><img src="./img/logo9.jpg" alt=""></li>
+                <li><img src="./img/logo10.jpg" alt=""></li>
+                <li><img src="./img/logo11.jpg" alt=""></li>
+                <li><img src="./img/logo12.jpg" alt=""></li>
+                <li><img src="./img/logo13.jpg" alt=""></li>
+            </div>
+        </ul> -->
+      
+
+</section>
+  
+    
+    <footer>
+        <div class="">
+            <div class="ft_t1">
+                <p class="ft_t_1">개인정보보호정책</p>
+                <p class="ft_t_2">메일주소무단수집거부</p>
+            </div>
+            <div class="sns">
+                <a href="https://blog.naver.com/yjjob8877" target="_blank"><img src="./images/blog.png"></a>
+                <a href="https://pf.kakao.com/_bItTxd" target="_blank"><img src="./images/kakao.png"></a>
+                <a href="https://www.instagram.com/accounts/login/?next=/yjjob8877/" target="_blank"><img src="./images/instagram.png"></a>
+                <a href="https://www.facebook.com/yjjob/" target="_blank"><img src="./images/facebook.png"></a>
+            </div>
+            
+            <div class="ft_i">
+                <img src="./images/logo.png">
+            </div>
+            <div class="ft_t3">
+                copyright © 대구 국비지원 무료교육 영진직업전문학교. All Rights Reserved.
+            </div>
+        </div>
+
+        <div class="ft_t2">
+            <span>회사명 : 영진직업전문학교</span> 
+            <span>대표자 : 곽승호, 차영숙</span>
+            <span>Tel : 053-983-8877</span> 
+            <span>Fax : 053-722-2423</span>
+            <span>개인정보보호책임자 : 곽창운</span>
+            <span>cha8877@hanmail.net </span>
+            <span>Tel : 053-983-8877</span>
+            <span>사업자번호 : 502-95-07029</span>
+            <span>
+            701-835 대구광역시 동구 화랑로 525(용계동), 
+            조경실습장 : 대구 동구 도동 806-21
+            </span>
+        </div>
+       
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+    <script>
+        var burger = $('.menu-trigger');
+    
+    burger.each(function(index){
+        var $this = $(this);
+        
+        $this.on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('active-' + (index+1));
+        })
+    });
+    </script>
+
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+</html>
