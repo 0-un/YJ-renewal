@@ -15,7 +15,7 @@ html {
     scroll-behavior: smooth; 
 }
 
-*{margin: 0; padding: 0; box-sizing: border-box;}
+*{margin: 0; padding: 0; box-sizing: border-box;  }
 a{text-decoration: none;}
 li{list-style: none;}
 
@@ -42,8 +42,8 @@ header{
     color: #fff;
 }
 
-#top_menu i{
-    padding-right: 5px;
+#top_menu li{
+    padding-right: 10px;
 }
 
 #top_menu a{
@@ -52,7 +52,7 @@ header{
 
 #top_menu ul{
     display: flex;
-    width: 400px;
+    max-width: 400px;
     justify-content: space-between;
 }
 
@@ -525,12 +525,14 @@ nav{width: 100%;}
 
 /* 섹션3 : 입학 안내 */
 #admission{
+    width: 100%;
     height: auto;
     background: #D2EBFF;
     padding: 20px 40px;
 }
 #admission .wrapper{
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
@@ -540,6 +542,7 @@ nav{width: 100%;}
 }
 #admission .title_letter{
     display: flex;
+    width: 100%;
     align-items: center;
     color: #395AFF;
     font-size: 18px;
@@ -636,7 +639,9 @@ nav{width: 100%;}
     padding: 30px 0;
 }
 
-
+#admission .grid_wrap{
+    width: 100%;
+}
 
 #admission .request{
     width: 300px;
@@ -1269,7 +1274,7 @@ footer{
     }
 }
 
-@media (max-width: 429.98px) and (min-width: 375px) {
+@media (max-width: 429.98px) {
     #portfolio .item_wrap{
         height: 180px;
     }

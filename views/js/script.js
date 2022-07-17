@@ -1,5 +1,3 @@
-
-
 /*------------------------------------*\
   #1. 데스크톱 - 네비게이션 드롭다운
 \*------------------------------------*/
@@ -87,125 +85,27 @@ function HideMenu(){
 //서브메뉴 슬라이딩
 
 $(function(){
-  var toggle1 = $('.slide_toggle1');
-  var toggle2 = $('.slide_toggle2');
-  var toggle3 = $('.slide_toggle3');
-  var toggle4 = $('.slide_toggle4');
-  var toggle5 = $('.slide_toggle5');
-  var toggle6 = $('.slide_toggle6');
 
-  var menu1 = $('.dropdown-container1');
-  var menu2 = $('.dropdown-container2');
-  var menu3 = $('.dropdown-container3');
-  var menu4 = $('.dropdown-container4');
-  var menu5 = $('.dropdown-container5');
-  var menu6 = $('.dropdown-container6');
+  // 0717 수정
+  let toggleMenu =  document.getElementsByClassName("slide_toggle");
+  let dropMenu =  document.getElementsByClassName("dropdown-container");
 
 
-
-    //$(”이벤트 대상”).이벤트종류(function(){});
-    $(toggle1).on('click',function(e){ 
+  for(let i = 0; i <toggleMenu.length; i++){
+    $(toggleMenu[i]).on('click',function(e){ 
         //toggle을 클릭했을 때 이벤트 발생
         e.preventDefault(); 
         // 이벤트 버블링을 막기 위한 코드
         //이벤트 버블링 : 버튼을 감싸고 있는 wrapper에도 이벤트가 작동되는 현상
+      for(let j= 0; j <toggleMenu.length; j++){
+        if($(dropMenu[j]).css('display') == 'block')
+        $(dropMenu[j]).slideToggle();
+      }
+        $(dropMenu[i]).slideToggle();
 
-
-        menu1.slideToggle(); 
-        // 효과 메서드, slideUp(), slideDown()  효과 동시 적용
-        // 다른 메뉴 닫기
-        if(menu2.css('display') == 'block')
-        menu2.slideToggle();
-        if(menu3.css('display') == 'block')
-        menu3.slideToggle();
-        if(menu4.css('display') == 'block')
-        menu4.slideToggle();
-        if(menu5.css('display') == 'block')
-        menu5.slideToggle();
-        if(menu6.css('display') == 'block')
-        menu6.slideToggle();
     })
-    $(toggle2).on('click',function(e){ 
-        //toggle을 클릭했을 때 이벤트 발생
-        e.preventDefault(); 
-        // 이벤트 버블링을 막기 위한 코드
-        //이벤트 버블링 : 버튼을 감싸고 있는 wrapper에도 이벤트가 작동되는 현상
-        menu2.slideToggle(); 
-        // 효과 메서드, slideUp(), slideDown()  효과 동시 적용
-          // 다른 메뉴 닫기
-          if(menu1.css('display') == 'block')
-          menu1.slideToggle();
-          if(menu3.css('display') == 'block')
-          menu3.slideToggle();
-          if(menu4.css('display') == 'block')
-          menu4.slideToggle();
-          if(menu5.css('display') == 'block')
-          menu5.slideToggle();
-          if(menu6.css('display') == 'block')
-          menu6.slideToggle();
-    })
-    $(toggle3).on('click',function(e){ 
-      e.preventDefault(); 
-      menu3.slideToggle(); 
-        // 다른 메뉴 닫기
-        if(menu1.css('display') == 'block')
-        menu1.slideToggle();
-        if(menu2.css('display') == 'block')
-        menu2.slideToggle();
-        if(menu4.css('display') == 'block')
-        menu4.slideToggle();
-        if(menu5.css('display') == 'block')
-        menu5.slideToggle();
-        if(menu6.css('display') == 'block')
-        menu6.slideToggle();
-    })
-    $(toggle4).on('click',function(e){ 
-      e.preventDefault(); 
-      menu4.slideToggle(); 
-        // 다른 메뉴 닫기
-        if(menu1.css('display') == 'block')
-        menu1.slideToggle();
-        if(menu2.css('display') == 'block')
-        menu2.slideToggle();
-        if(menu3.css('display') == 'block')
-        menu3.slideToggle();
-        if(menu5.css('display') == 'block')
-        menu5.slideToggle();
-        if(menu6.css('display') == 'block')
-        menu6.slideToggle();
-    })
-    $(toggle5).on('click',function(e){ 
-      e.preventDefault(); 
-      menu5.slideToggle(); 
-        // 다른 메뉴 닫기
-        if(menu1.css('display') == 'block')
-        menu1.slideToggle();
-        if(menu2.css('display') == 'block')
-        menu2.slideToggle();
-        if(menu3.css('display') == 'block')
-        menu3.slideToggle();
-        if(menu4.css('display') == 'block')
-        menu4.slideToggle();
-        if(menu6.css('display') == 'block')
-        menu6.slideToggle();
-    })
-    $(toggle6).on('click',function(e){ 
-      e.preventDefault(); 
-      menu6.slideToggle(); 
-        // 다른 메뉴 닫기
-        if(menu1.css('display') == 'block')
-        menu1.slideToggle();
-        if(menu2.css('display') == 'block')
-        menu2.slideToggle();
-        if(menu3.css('display') == 'block')
-        menu3.slideToggle();
-        if(menu4.css('display') == 'block')
-        menu4.slideToggle();
-        if(menu5.css('display') == 'block')
-        menu5.slideToggle();
-    })
+  }
 });
-
 
 
 /*------------------------------------*\
