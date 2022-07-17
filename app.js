@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'assets')));
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 5000)
 
 app.use(logger('dev'));
 app.use(express.json());
