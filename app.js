@@ -65,7 +65,7 @@ app.use(function(err, req, res, next) {
 
 mongoConnect(()=>{
   // console.log(client);
-  const server = app.listen(app.get('port'),()=>{
+  const server = app.listen(process.env.PORT||app.get('port'),()=>{
     console.log(`express server on http://localhost:${server.address().port}`);
   })
 });
