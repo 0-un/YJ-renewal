@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node app.js"
   },
+
+  "homepage":"https://yj-renewal.herokuapp.com",
+
+
   "dependencies": {
     "axios": "^0.27.2",
     "connect-flash": "^0.1.1",
@@ -28,3 +32,4 @@
     "session-file-store": "^1.5.0"
   }
 }
+
