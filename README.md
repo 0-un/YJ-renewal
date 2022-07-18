@@ -22,7 +22,7 @@
 
 ## 담당 직무
 - 웹 퍼블리싱 
-- HTML5, CSS3, Javascript 사용
+- HTML5, CSS3, Javascript 사용 (views 폴더 내 작업)
 - 메인 페이지 반응형 웹 구현
 - 토글 메뉴 구현
 - 와이어 프레임 제작
